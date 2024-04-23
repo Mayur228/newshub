@@ -1,11 +1,11 @@
-package com.khush.newshub.data.database.dao
+package com.theappmakerbuddy.newshub.data.database.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Transaction
-import com.khush.newshub.data.database.entity.Article
+import com.theappmakerbuddy.newshub.data.database.entity.Article
 import kotlinx.coroutines.flow.Flow
 
 @Dao

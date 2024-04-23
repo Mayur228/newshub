@@ -10,14 +10,11 @@ sealed class Route(
     @DrawableRes val icon: Int,
     val routeWithoutArgs: String = route
 ) {
-    object TopNews :
-        Route("topNews/{country}/{language}/{source}", R.string.news, R.drawable.news_ic, "topNews")
-
+    object TopNews : Route("topNews/{country}/{language}/{source}", R.string.news, R.drawable.news_ic, "topNews")
     object FilterNews : Route("filterNews", R.string.filter, R.drawable.filter_ic)
     object SavedNews : Route("savedNews", R.string.saved, R.drawable.save_ic)
     object SearchNews : Route("searchNews", R.string.search, R.drawable.search_ic)
-    object NewsArticle :
-        Route("newsArticle/{article}", R.string.news, R.drawable.news_ic, "newsArticle")
+    object NewsArticle : Route("newsArticle/{article}", R.string.news, R.drawable.news_ic, "newsArticle")
 }
 
 sealed class FilterRoute(

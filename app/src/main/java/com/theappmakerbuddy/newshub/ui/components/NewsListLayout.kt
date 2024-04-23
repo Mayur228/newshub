@@ -7,8 +7,7 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.SwipeToDismiss
 import androidx.compose.material3.rememberDismissState
 import androidx.compose.runtime.Composable
-import com.khush.newshub.data.database.entity.Article
-import com.theappmakerbuddy.newshub.ui.components.Article
+import com.theappmakerbuddy.newshub.data.database.entity.Article
 
 
 @Composable

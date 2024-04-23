@@ -1,6 +1,6 @@
 package com.theappmakerbuddy.newshub.data.database
 
-import com.khush.newshub.data.database.entity.Article
+import com.theappmakerbuddy.newshub.data.database.entity.Article
 import kotlinx.coroutines.flow.Flow
 
 interface DatabaseService {

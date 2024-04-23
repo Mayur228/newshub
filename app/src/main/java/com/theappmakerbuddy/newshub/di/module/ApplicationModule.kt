@@ -6,7 +6,6 @@ import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.room.Room
 import androidx.work.WorkManager
-import com.khush.newshub.data.database.entity.Article
 import com.theappmakerbuddy.newshub.common.Const
 import com.theappmakerbuddy.newshub.common.dispatcher.DefaultDispatcherProvider
 import com.theappmakerbuddy.newshub.common.dispatcher.DispatcherProvider
@@ -17,11 +16,13 @@ import com.theappmakerbuddy.newshub.common.networkhelper.NetworkHelperImpl
 import com.theappmakerbuddy.newshub.data.database.AppDatabaseService
 import com.theappmakerbuddy.newshub.data.database.ArticleDatabase
 import com.theappmakerbuddy.newshub.data.database.DatabaseService
+import com.theappmakerbuddy.newshub.data.database.entity.Article
 import com.theappmakerbuddy.newshub.data.network.ApiInterface
 import com.theappmakerbuddy.newshub.data.network.ApiKeyInterceptor
 import com.theappmakerbuddy.newshub.di.ApiKey
 import com.theappmakerbuddy.newshub.di.BaseUrl
 import com.theappmakerbuddy.newshub.di.DbName
+import com.theappmakerbuddy.newshub.ui.paging.NewsPagingSource
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -95,7 +96,7 @@ class ApplicationModule {
     @Singleton
     fun provideDispatcher(): DispatcherProvider = DefaultDispatcherProvider()
 
-    /*@Provides
+    @Provides
     @Singleton
     fun providePager(
         newsPagingSource: NewsPagingSource
@@ -107,7 +108,7 @@ class ApplicationModule {
         ) {
             newsPagingSource
         }
-    }*/
+    }
 
     @Provides
     @Singleton

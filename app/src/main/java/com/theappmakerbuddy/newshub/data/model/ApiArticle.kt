@@ -1,7 +1,7 @@
 package com.theappmakerbuddy.newshub.data.model
 
 import com.google.gson.annotations.SerializedName
-import com.khush.newshub.data.database.entity.Source
+import com.theappmakerbuddy.newshub.data.database.entity.Source
 
 data class ApiArticle(
 

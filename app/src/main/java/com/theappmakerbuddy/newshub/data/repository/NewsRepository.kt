@@ -1,7 +1,7 @@
 package com.theappmakerbuddy.newshub.data.repository
 
-import com.khush.newshub.data.database.entity.Article
-import com.khush.newshub.data.database.entity.Source
+import com.theappmakerbuddy.newshub.data.database.entity.Article
+import com.theappmakerbuddy.newshub.data.database.entity.Source
 import com.theappmakerbuddy.newshub.common.Const
 import com.theappmakerbuddy.newshub.common.Const.DEFAULT_PAGE_NUM
 import com.theappmakerbuddy.newshub.common.util.apiArticleListToArticleList

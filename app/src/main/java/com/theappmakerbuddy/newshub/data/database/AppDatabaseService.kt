@@ -1,7 +1,7 @@
 package com.theappmakerbuddy.newshub.data.database
 
 
-import com.khush.newshub.data.database.entity.Article
+import com.theappmakerbuddy.newshub.data.database.entity.Article
 import com.theappmakerbuddy.newshub.common.util.articleToSavedArticleEntity
 import com.theappmakerbuddy.newshub.common.util.savedArticleEntityToArticle
 import kotlinx.coroutines.ExperimentalCoroutinesApi

@@ -3,6 +3,7 @@ package com.theappmakerbuddy.newshub.ui.base
 import android.view.ViewGroup
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -63,7 +64,7 @@ fun ShowError(
         verticalArrangement = Arrangement.spacedBy(10.dp, Alignment.CenterVertically),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Icon(
+        Image(
             painter = painterResource(id = R.drawable.error_ic),
             contentDescription = null,
             modifier = modifier

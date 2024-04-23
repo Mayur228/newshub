@@ -1,6 +1,6 @@
 package com.theappmakerbuddy.newshub.common.util
 
-import com.khush.newshub.data.database.entity.Article
+import com.theappmakerbuddy.newshub.data.database.entity.Article
 
 fun List<Article>.filterArticles(): List<Article> {
     return this.filterNot { article ->

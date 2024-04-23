@@ -1,5 +1,6 @@
 package com.theappmakerbuddy.newshub.ui.components
 
+import android.graphics.Color
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -11,6 +12,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.material3.Card
+import androidx.compose.material3.CardColors
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -19,7 +22,8 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
-import com.khush.newshub.data.database.entity.Article
+import com.theappmakerbuddy.newshub.data.database.entity.Article
+import com.theappmakerbuddy.newshub.ui.theme.CardBg
 
 @Composable
 fun Article(article: Article, onItemClick: (Article) -> Unit) {
@@ -29,7 +33,10 @@ fun Article(article: Article, onItemClick: (Article) -> Unit) {
         .padding(4.dp)
         .clickable {
             onItemClick(article)
-        }) {
+        },
+        colors = CardDefaults.cardColors(
+            containerColor = CardBg
+        )) {
         Row(modifier = Modifier.height(120.dp)) {
             article.urlToImage?.let { ArticleImage(urlToImage = it, title = article.title) }
             Column(
