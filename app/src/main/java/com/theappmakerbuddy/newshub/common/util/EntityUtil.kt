@@ -1,9 +1,9 @@
 package com.theappmakerbuddy.newshub.common.util
 
-import com.khush.newshub.data.database.entity.Article
-import com.khush.newshub.data.database.entity.SavedArticleEntity
-import com.khush.newshub.data.database.entity.SavedSourceEntity
-import com.khush.newshub.data.database.entity.Source
+import com.theappmakerbuddy.newshub.data.database.entity.Article
+import com.theappmakerbuddy.newshub.data.database.entity.SavedArticleEntity
+import com.theappmakerbuddy.newshub.data.database.entity.SavedSourceEntity
+import com.theappmakerbuddy.newshub.data.database.entity.Source
 import com.theappmakerbuddy.newshub.data.model.ApiArticle
 import com.theappmakerbuddy.newshub.data.model.ApiSource
 

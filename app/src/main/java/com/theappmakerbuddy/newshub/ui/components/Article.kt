@@ -1,6 +1,5 @@
 package com.theappmakerbuddy.newshub.ui.components
 
-import android.graphics.Color
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -12,18 +11,20 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.material3.Card
-import androidx.compose.material3.CardColors
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.theappmakerbuddy.newshub.data.database.entity.Article
-import com.theappmakerbuddy.newshub.ui.theme.CardBg
+import com.theappmakerbuddy.newshub.ui.theme.LogoColor2
+import com.theappmakerbuddy.newshub.ui.theme.LogoColor3
+import com.theappmakerbuddy.newshub.ui.theme.LogoColorMain
 
 @Composable
 fun Article(article: Article, onItemClick: (Article) -> Unit) {
@@ -35,7 +36,7 @@ fun Article(article: Article, onItemClick: (Article) -> Unit) {
             onItemClick(article)
         },
         colors = CardDefaults.cardColors(
-            containerColor = CardBg
+            containerColor = LogoColor2
         )) {
         Row(modifier = Modifier.height(120.dp)) {
             article.urlToImage?.let { ArticleImage(urlToImage = it, title = article.title) }
@@ -68,7 +69,8 @@ fun ArticleTitle(title: String) {
         maxLines = 1,
         overflow = TextOverflow.Ellipsis,
         modifier = Modifier.padding(8.dp),
-        style = MaterialTheme.typography.titleMedium
+        style = MaterialTheme.typography.titleMedium,
+        color = LogoColorMain
     )
 }
 
@@ -78,6 +80,7 @@ fun ArticleDescription(description: String) {
         text = description,
         overflow = TextOverflow.Ellipsis,
         modifier = Modifier.padding(8.dp),
-        style = MaterialTheme.typography.titleSmall
+        style = MaterialTheme.typography.titleSmall,
+        color = LogoColorMain
     )
 }

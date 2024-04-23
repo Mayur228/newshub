@@ -2,6 +2,7 @@ package com.theappmakerbuddy.newshub.ui.screens
 
 import android.widget.Toast
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Scaffold
@@ -10,6 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.theappmakerbuddy.newshub.data.database.entity.Article
 import com.theappmakerbuddy.newshub.R
@@ -37,7 +39,7 @@ fun ArticleScreen(
                     Toast.LENGTH_SHORT
                 ).show()
             }) {
-                Icon(painter = painterResource(id = R.drawable.save_ic), contentDescription = null)
+                Icon(modifier = Modifier.size(20.dp),painter = painterResource(id = R.drawable.save_ic), contentDescription = null)
             }
         }
     ) {

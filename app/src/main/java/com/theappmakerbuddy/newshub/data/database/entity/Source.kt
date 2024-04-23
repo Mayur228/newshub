@@ -1,4 +1,4 @@
-package com.khush.newshub.data.database.entity
+package com.theappmakerbuddy.newshub.data.database.entity
 
 import androidx.room.ColumnInfo
 

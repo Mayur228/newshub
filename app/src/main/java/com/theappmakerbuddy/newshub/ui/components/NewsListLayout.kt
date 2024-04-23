@@ -1,5 +1,6 @@
 package com.theappmakerbuddy.newshub.ui.components
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.DismissDirection
@@ -7,7 +8,9 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.SwipeToDismiss
 import androidx.compose.material3.rememberDismissState
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import com.theappmakerbuddy.newshub.data.database.entity.Article
+import com.theappmakerbuddy.newshub.ui.theme.LogoColorMain
 
 
 @Composable
@@ -31,7 +34,7 @@ fun NewsLayoutWithDelete(
     articleClicked: (Article) -> Unit,
     deleteArticle: (Article) -> Unit
 ) {
-    LazyColumn {
+    LazyColumn(modifier = Modifier.background(color = LogoColorMain)) {
         items(newsList, key = { article -> article.url!! }) { article ->
             val dismissState = rememberDismissState()
             if (dismissState.isDismissed(direction = DismissDirection.EndToStart) || dismissState.isDismissed(

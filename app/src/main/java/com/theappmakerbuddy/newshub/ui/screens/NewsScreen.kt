@@ -35,6 +35,7 @@ import com.theappmakerbuddy.newshub.ui.base.ShowLoading
 import com.theappmakerbuddy.newshub.ui.base.UIState
 import com.theappmakerbuddy.newshub.ui.components.Article
 import com.theappmakerbuddy.newshub.ui.components.NewsLayout
+import com.theappmakerbuddy.newshub.ui.theme.LogoColorMain
 import com.theappmakerbuddy.newshub.ui.viewmodels.NewsViewModel
 
 @OptIn(ExperimentalMaterialApi::class)
@@ -57,7 +58,7 @@ fun NewsScreen(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color.White)
+            .background(LogoColorMain)
             .pullRefresh(pullRefreshState)
     ) {
         when (newsUiState) {
@@ -125,7 +126,7 @@ fun NewsScreenPaging(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color.White)
+            .background(LogoColorMain)
             .pullRefresh(pullRefreshState)
     ) {
         when (pagingResponse.loadState.refresh) {

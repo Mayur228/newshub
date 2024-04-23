@@ -2,6 +2,7 @@ package com.theappmakerbuddy.newshub.ui.base
 
 import android.widget.Toast
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CutCornerShape
@@ -51,6 +52,10 @@ import com.theappmakerbuddy.newshub.ui.screens.NewsScreenPaging
 import com.theappmakerbuddy.newshub.ui.screens.SavedScreen
 import com.theappmakerbuddy.newshub.ui.screens.SearchScreen
 import com.theappmakerbuddy.newshub.ui.screens.SourceScreen
+import com.theappmakerbuddy.newshub.ui.theme.LogoColor1
+import com.theappmakerbuddy.newshub.ui.theme.LogoColor2
+import com.theappmakerbuddy.newshub.ui.theme.LogoColor3
+import com.theappmakerbuddy.newshub.ui.theme.LogoColorMain
 import java.net.URLEncoder
 import kotlin.text.Charsets.UTF_8
 
@@ -184,7 +189,7 @@ fun NewsBottomNavigation(
     currentScreen: Route,
     onIconSelected: (Route) -> Unit
 ) {
-    NavigationBar(modifier = Modifier.clip(RoundedCornerShape(topStart = 12.dp, topEnd = 12.dp)), containerColor = Color.Black) {
+    NavigationBar(containerColor = LogoColor3) {
         bottomBarScreens.forEach { screen ->
             val selected = screen == currentScreen
             NavigationBarItem(
@@ -193,12 +198,12 @@ fun NewsBottomNavigation(
                     Text(text = stringResource(id = screen.resourceId), color = Color.White)
                 },
                 icon = {
-                    Icon(painter = painterResource(id = screen.icon), null, modifier = Modifier.size(20.dp))
+                    Icon(painter = painterResource(id = screen.icon), null, modifier = Modifier.size(20.dp), tint = Color.White)
                 },
                 onClick = {
                     onIconSelected.invoke(screen)
                 },
-                colors = if (selected) NavigationBarItemDefaults.colors(Color.Black) else NavigationBarItemDefaults.colors(Color.Black)
+                colors = NavigationBarItemDefaults.colors(Color.White)
             )
         }
     }
@@ -287,19 +292,21 @@ fun FilterNavigation(
     currentScreen: FilterRoute,
     onIconSelected: (FilterRoute) -> Unit
 ) {
-    NavigationBar {
+    NavigationBar(containerColor = LogoColor3) {
         filterScreens.forEach { screen ->
+            val selected = screen == currentScreen
             NavigationBarItem(
-                selected = screen == currentScreen,
+                selected = selected,
                 label = {
-                    Text(text = stringResource(id = screen.resourceId))
+                    Text(text = stringResource(id = screen.resourceId), color = Color.White)
                 },
                 icon = {
-                    Icon(painter = painterResource(id = screen.icon), null, modifier = Modifier.size(20.dp))
+                    Icon(painter = painterResource(id = screen.icon), null, modifier = Modifier.size(20.dp), tint = Color.White)
                 },
                 onClick = {
                     onIconSelected.invoke(screen)
-                }
+                },
+                colors = NavigationBarItemDefaults.colors(Color.White)
             )
         }
     }

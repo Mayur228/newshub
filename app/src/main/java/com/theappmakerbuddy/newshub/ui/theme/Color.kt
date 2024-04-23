@@ -10,4 +10,7 @@ val Purple40 = Color(0xFF6650a4)
 val PurpleGrey40 = Color(0xFF625b71)
 val Pink40 = Color(0xFF7D5260)
 
-val CardBg = Color(0xFF0E346A)
+val LogoColorMain = Color(0xFF0E346A)
+val LogoColor1 = Color(0xFF00A5FF)
+val LogoColor2 = Color(0xFF00A5FF)
+val LogoColor3 = Color(0xFF136EF1)
