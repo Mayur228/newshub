@@ -25,8 +25,8 @@ android {
 
     buildTypes {
         debug {
-            buildConfigField("String", "API_KEY", "\"0a3fc4d3485f406f9ba382ac238fdd2b\"")
-            //FIXME remove the string and add your api key
+            buildConfigField("String", "API_KEY", "\"Your API Key\"")
+            // remove the string and add your api key
         }
         release {
             isMinifyEnabled = false
